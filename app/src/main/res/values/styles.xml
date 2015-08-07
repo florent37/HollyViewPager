@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
@@ -15,6 +15,7 @@
 
         <!-- Toolbar Theme / Apply white arrow -->
         <item name="colorControlNormal">@android:color/white</item>
+        <item tools:targetApi="19" name="android:windowTranslucentStatus">true</item>
 
     </style>
 
