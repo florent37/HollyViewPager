@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="android-observablescrollview-1.5.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.ksoichiro/android-observablescrollview/1.5.2/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.ksoichiro/android-observablescrollview/1.5.2/res" />
+      <root url="file://$PROJECT_DIR$/hollyviewpager/build/intermediates/exploded-aar/com.github.ksoichiro/android-observablescrollview/1.5.2/res" />
+      <root url="jar://$PROJECT_DIR$/hollyviewpager/build/intermediates/exploded-aar/com.github.ksoichiro/android-observablescrollview/1.5.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
