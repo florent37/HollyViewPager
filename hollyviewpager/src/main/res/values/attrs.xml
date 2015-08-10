@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HollyViewPager">
+        <attr name="hvp_headerHeight" format="dimension"/>
+        <attr name="hvp_headerBackgroundView" format="reference"/>
+    </declare-styleable>
+</resources>

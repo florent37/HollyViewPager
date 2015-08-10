@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.github.florent37.beautifulviewpager.sample.fragment.ScrollViewFragment;
 import com.github.florent37.hollyviewpager.HollyViewPager;
+import com.github.florent37.hollyviewpager.HollyViewPagerConfigurator;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -33,13 +34,20 @@ public class MainActivity extends AppCompatActivity {
 
         hollyViewPager.getViewPager().setPageMargin(getResources().getDimensionPixelOffset(R.dimen.viewpager_margin));
 
+        hollyViewPager.setConfigurator(new HollyViewPagerConfigurator() {
+            @Override
+            public float getHeightPercentForPage(int page) {
+                return ((page+4)%10)/10f;
+            }
+        });
+
         hollyViewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
                 //if(position%2==0)
                 //    return new RecyclerViewFragment();
                 //else
-                return new ScrollViewFragment();
+                return ScrollViewFragment.newInstance((String) getPageTitle(position));
             }
 
             @Override

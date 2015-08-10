@@ -34,4 +34,8 @@ public class HollyViewPagerBus {
         if(hollyViewPager != null)
             hollyViewPager.registerRecyclerView(recyclerView);
     }
+
+    public static HollyViewPager get(Context context){
+        return map.get(context);
+    }
 }

@@ -36,12 +36,10 @@ public class HollyViewPagerAnimator implements ViewPager.OnPageChangeListener {
         if (position != oldpage) {
             oldpage = position;
             for (int i = 0, size = hvp.headerHolders.size(); i < size; ++i) {
-                hvp.headerHolders.get(i).view.animate().cancel();
                 if (i == position) {
-                    hvp.headerHolders.get(i).view.animate().setDuration(300).alpha(1).start();
+                    hvp.headerHolders.get(i).animateEnabled(true);
 
-                    Rect rect = new Rect();
-                    if (!hvp.headerHolders.get(i).view.getGlobalVisibleRect(rect)) {
+                    if (!hvp.headerHolders.get(i).isVisible()) {
                         if (i - 1 > 0)
                             hvp.headerScroll.smoothScrollTo(hvp.headerHolders.get(i - 1).view.getLeft(), 0);
                         else
@@ -49,8 +47,7 @@ public class HollyViewPagerAnimator implements ViewPager.OnPageChangeListener {
                     }
 
                 } else {
-                    if (hvp.headerHolders.get(i).view.getAlpha() != 0.5)
-                        hvp.headerHolders.get(i).view.animate().setDuration(300).alpha(0.5f);
+                    hvp.headerHolders.get(i).animateEnabled(false);
                 }
             }
         }
@@ -96,14 +93,6 @@ public class HollyViewPagerAnimator implements ViewPager.OnPageChangeListener {
         }
     }
 
-    Random rand = new Random();
-
-    public float random() {
-        float minX = 0.4f;
-        float maxX = 0.8f;
-        return rand.nextFloat() * (maxX - minX) + minX;
-    }
-
     protected void fillHeader(PagerAdapter adapter) {
         hvp.headerLayout.removeAllViews();
 
@@ -112,20 +101,12 @@ public class HollyViewPagerAnimator implements ViewPager.OnPageChangeListener {
             View view = layoutInflater.inflate(R.layout.header_card, hvp.headerLayout, false);
             hvp.headerLayout.addView(view);
 
-            HeaderHolder headerHolder = new HeaderHolder(view, (TextView) view.findViewById(R.id.title), view.findViewById(R.id.card));
+            HeaderHolder headerHolder = new HeaderHolder(view);
             hvp.headerHolders.add(headerHolder);
 
-            headerHolder.textView.setText(adapter.getPageTitle(i));
-
-            ViewGroup.LayoutParams layoutParams = headerHolder.card.getLayoutParams();
-            layoutParams.height = (int) (view.getLayoutParams().height * random());
-            headerHolder.card.setLayoutParams(layoutParams);
-
-            if (i == 0) {
-                hvp.headerHolders.get(i).view.setAlpha(1f);
-            } else {
-                hvp.headerHolders.get(i).view.setAlpha(0.5f);
-            }
+            headerHolder.setTitle(adapter.getPageTitle(i));
+            headerHolder.setHeightPercent(hvp.configurator.getHeightPercentForPage(i));
+            headerHolder.setEnabled(i == 0);
 
             final int position = i;
             view.setOnClickListener(new View.OnClickListener() {

@@ -21,10 +21,13 @@ import java.util.List;
 public class HollyViewPager extends FrameLayout {
 
     protected HollyViewPagerAnimator animator;
+    protected HollyViewPagerSettings settings = new HollyViewPagerSettings();
 
     protected HorizontalScrollView headerScroll;
     protected ViewGroup headerLayout;
     protected ViewPager viewPager;
+
+    protected HollyViewPagerConfigurator configurator;
 
     protected List<HeaderHolder> headerHolders = new ArrayList<>();
 
@@ -34,10 +37,20 @@ public class HollyViewPager extends FrameLayout {
 
     public HollyViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
+        settings.handleAttributes(context, attrs);
     }
 
     public HollyViewPager(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        settings.handleAttributes(context, attrs);
+    }
+
+    public HollyViewPagerConfigurator getConfigurator() {
+        return configurator;
+    }
+
+    public void setConfigurator(HollyViewPagerConfigurator configurator) {
+        this.configurator = configurator;
     }
 
     @Override
@@ -64,6 +77,12 @@ public class HollyViewPager extends FrameLayout {
         viewPager = (ViewPager) findViewById(R.id.bfp_viewPager);
         headerScroll = (HorizontalScrollView) findViewById(R.id.bfp_headerScroll);
         headerLayout = (ViewGroup) findViewById(R.id.bfp_headerLayout);
+
+        {
+            ViewGroup.LayoutParams layoutParams = headerLayout.getLayoutParams();
+            layoutParams.height = this.settings.headerHeightPx;
+            headerLayout.setLayoutParams(layoutParams);
+        }
 
         animator = new HollyViewPagerAnimator(this);
     }
