@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         hollyViewPager.getViewPager().setPageMargin(getResources().getDimensionPixelOffset(R.dimen.viewpager_margin));
-
         hollyViewPager.setConfigurator(new HollyViewPagerConfigurator() {
             @Override
             public float getHeightPercentForPage(int page) {

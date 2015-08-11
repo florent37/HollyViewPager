@@ -1,6 +1,5 @@
 package com.github.florent37.hollyviewpager;
 
-import android.graphics.Rect;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
@@ -17,7 +15,6 @@ import com.github.ksoichiro.android.observablescrollview.ScrollState;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by florentchampigny on 07/08/15.
@@ -74,7 +71,9 @@ public class HollyViewPagerAnimator implements ViewPager.OnPageChangeListener {
             if (verticalOffset < finalHeaderHeight) {
                 float percent = (initialHeaderHeight - verticalOffset) / initialHeaderHeight;
 
-                hvp.headerLayout.setPivotX(0);
+                int page = Math.max(0,oldpage);
+                hvp.headerLayout.setPivotX(hvp.headerLayout.getChildAt(page).getLeft());
+
                 //headerLayout.setPivotY(0);
                 hvp.headerLayout.setScaleX(percent);
                 hvp.headerLayout.setScaleY(percent);
@@ -147,11 +146,7 @@ public class HollyViewPagerAnimator implements ViewPager.OnPageChangeListener {
         scrollView.setScrollViewCallbacks(new ObservableScrollViewCallbacks() {
             @Override
             public void onScrollChanged(int i, boolean b, boolean b1) {
-                if (calledScrolls.contains(scrollView))
-                    calledScrolls.remove(scrollView);
-                else {
-                    onScroll(scrollView, i);
-                }
+                onScroll(scrollView, i);
             }
 
             @Override
@@ -181,6 +176,8 @@ public class HollyViewPagerAnimator implements ViewPager.OnPageChangeListener {
                 }
             }
         }
+
+        calledScrolls.clear();
     }
 
     @Override
