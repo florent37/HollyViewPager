@@ -2,6 +2,10 @@
 
 [![screen](http://j.gifs.com/vZ4D9G.gif)](https://www.youtube.com/watch?v=4ZmjEde-Xho)
 
+<a href="https://play.google.com/store/apps/details?id=com.github.florent37.hollyviewpager.sample">
+  <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
+</a>
+
 #Usage
 
 Add a HollyViewPager in your layout
