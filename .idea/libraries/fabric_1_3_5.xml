@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="fabric-1.3.5">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/sample/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.5/res" />
+      <root url="jar://$PROJECT_DIR$/sample/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.5/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
