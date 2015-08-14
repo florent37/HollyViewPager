@@ -15,7 +15,7 @@
         android:layout_marginRight="@dimen/viewpager_margin_fix"
         android:orientation="vertical">
 
-        <include layout="@layout/header_placeholder"/>
+        <include layout="@layout/hvp_header_placeholder"/>
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"

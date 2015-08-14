@@ -72,9 +72,10 @@ public class HollyViewPagerAnimator implements ViewPager.OnPageChangeListener {
                 float percent = (initialHeaderHeight - verticalOffset) / initialHeaderHeight;
 
                 int page = Math.max(0,oldpage);
-                hvp.headerLayout.setPivotX(hvp.headerLayout.getChildAt(page).getLeft());
 
                 //headerLayout.setPivotY(0);
+                hvp.headerLayout.setPivotX(hvp.headerLayout.getChildAt(page).getLeft());
+
                 hvp.headerLayout.setScaleX(percent);
                 hvp.headerLayout.setScaleY(percent);
                 hvp.headerLayout.setTranslationY(verticalOffset / 2);
@@ -97,7 +98,7 @@ public class HollyViewPagerAnimator implements ViewPager.OnPageChangeListener {
 
         LayoutInflater layoutInflater = LayoutInflater.from(hvp.getContext());
         for (int i = 0; i < adapter.getCount(); ++i) {
-            View view = layoutInflater.inflate(R.layout.header_card, hvp.headerLayout, false);
+            View view = layoutInflater.inflate(R.layout.hvp_header_card, hvp.headerLayout, false);
             hvp.headerLayout.addView(view);
 
             HeaderHolder headerHolder = new HeaderHolder(view);

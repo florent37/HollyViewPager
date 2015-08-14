@@ -72,7 +72,7 @@ public class HollyViewPager extends FrameLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        addView(LayoutInflater.from(getContext()).inflate(R.layout.beaufitul_view_pager, this, false));
+        addView(LayoutInflater.from(getContext()).inflate(R.layout.holly_view_pager, this, false));
 
         viewPager = (ViewPager) findViewById(R.id.bfp_viewPager);
         headerScroll = (HorizontalScrollView) findViewById(R.id.bfp_headerScroll);

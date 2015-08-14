@@ -28,7 +28,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         View view;
         switch (type){
             case TYPE_HEADER:
-                view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.header_placeholder,viewGroup,false);
+                view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.hvp_header_placeholder,viewGroup,false);
                 break;
             default:
                 view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.content_card,viewGroup,false);
