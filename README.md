@@ -1,6 +1,6 @@
 # HollyViewPager
 
-[![screen](http://j.gifs.com/vZ4D9G.gif)](https://www.youtube.com/watch?v=T51vi8ltZ5k)]
+[![screen](http://j.gifs.com/vZ4D9G.gif)](https://www.youtube.com/watch?v=4ZmjEde-Xho)
 
 #Usage
 
@@ -116,4 +116,3 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-   
