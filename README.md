@@ -80,6 +80,7 @@ HollyViewPagerBus.registerScrollView(getActivity(), scrollView);
 In your module [![Download](https://api.bintray.com/packages/florent37/maven/HollyViewPager/images/download.svg)](https://bintray.com/florent37/maven/HollyViewPager/_latestVersion)
 ```groovy
 compile 'com.github.florent37:hollyviewpager:1.0.0'
+compile 'com.github.ksoichiro:android-observablescrollview:1.5.2'
 ```
 
 #Credits

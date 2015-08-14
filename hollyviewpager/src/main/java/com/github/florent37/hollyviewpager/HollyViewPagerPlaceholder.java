@@ -32,7 +32,7 @@ public class HollyViewPagerPlaceholder extends View {
     }
 
     private void setHeaderHeight() {
-        //get the MaterialViewPagerAnimator attached to this activity
+        //get the HollyViewPagerAnimator attached to this activity
         //to retrieve the declared header height
         //and set it as current view height (+10dp margin)
 
