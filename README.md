@@ -17,6 +17,13 @@ Add a HollyViewPager in your layout
 ```java
 HollyViewPager hollyViewPager = findViewById(R.id.hollyViewPager);
 hollyViewPager.setAdapter(...);
+
+hollyViewPager.setConfigurator(new HollyViewPagerConfigurator() {
+           @Override
+           public float getHeightPercentForPage(int page) {
+               return PERCENT;
+           }
+       });
 ```
 
 #RecyclerView
