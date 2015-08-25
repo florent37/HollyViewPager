@@ -1,5 +1,7 @@
 # HollyViewPager
 
+[![screen](https://raw.githubusercontent.com/florent37/HollyViewPager/master/screens/1024_small.png)](https://www.youtube.com/watch?v=4ZmjEde-Xho)
+
 [![screen](http://j.gifs.com/vZ4D9G.gif)](https://www.youtube.com/watch?v=4ZmjEde-Xho)
 
 <a href="https://play.google.com/store/apps/details?id=com.github.florent37.hollyviewpager.sample">
