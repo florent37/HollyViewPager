@@ -34,6 +34,10 @@ hollyViewPager.setConfigurator(new HollyViewPagerConfigurator() {
        });
 ```
 
+#Pages
+You pages should contain a recyclerview or a ObservableScrollView
+----------
+
 #RecyclerView
 ```java	
 HollyViewPagerBus.registerRecyclerView(getActivity(), recyclerView);
