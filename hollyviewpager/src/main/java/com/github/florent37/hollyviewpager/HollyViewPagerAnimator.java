@@ -12,6 +12,7 @@ import android.widget.ScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
+import com.nineoldandroids.view.ViewHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,13 +75,13 @@ public class HollyViewPagerAnimator implements ViewPager.OnPageChangeListener {
                 int page = Math.max(0,oldpage);
 
                 //headerLayout.setPivotY(0);
-                hvp.headerLayout.setPivotX(hvp.headerLayout.getChildAt(page).getLeft());
+                ViewHelper.setPivotX(hvp.headerLayout, hvp.headerLayout.getChildAt(page).getLeft());
 
-                hvp.headerLayout.setScaleX(percent);
-                hvp.headerLayout.setScaleY(percent);
-                hvp.headerLayout.setTranslationY(verticalOffset / 2);
+                ViewHelper.setScaleX(hvp.headerLayout, percent);
+                ViewHelper.setScaleY(hvp.headerLayout, percent);
+                ViewHelper.setTranslationY(hvp.headerLayout, verticalOffset / 2);
 
-                hvp.headerLayout.setTranslationX(1.5f * verticalOffset);
+                ViewHelper.setTranslationX(hvp.headerLayout,1.5f * verticalOffset);
 
                 float alphaPercent = 1 - verticalOffset / finalHeaderHeight;
                 for (int i = 0, count = hvp.headerHolders.size(); i < count; ++i) {
