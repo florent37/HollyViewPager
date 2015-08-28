@@ -104,7 +104,7 @@ compile 'com.github.ksoichiro:android-observablescrollview:1.5.2'
 
 #Credits
 
-Author: Florent Champigny
+Author: Florent Champigny [www.florentchampigny.com/](www.florentchampigny.com/)
 
 <a href="https://plus.google.com/+florentchampigny">
   <img alt="Follow me on Google+"
