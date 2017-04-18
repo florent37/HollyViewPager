@@ -10,7 +10,7 @@
   <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
 </a>
 
-#Usage
+# Usage
 
 Add a HollyViewPager in your layout
 
@@ -34,11 +34,11 @@ hollyViewPager.setConfigurator(new HollyViewPagerConfigurator() {
        });
 ```
 
-#Pages
+# Pages
 You pages should contain a recyclerview or a ObservableScrollView
 ----------
 
-#RecyclerView
+# RecyclerView
 ```java	
 HollyViewPagerBus.registerRecyclerView(getActivity(), recyclerView);
 ```
@@ -70,7 +70,7 @@ Adapter
     }
 ```
 
-#ScrollView
+# ScrollView
 
 ```java	
 HollyViewPagerBus.registerScrollView(getActivity(), scrollView);
@@ -94,7 +94,7 @@ HollyViewPagerBus.registerScrollView(getActivity(), scrollView);
         ... YOUR CONTENT ...
 ```
 
-#Download
+# Download
 
 In your module [![Download](https://api.bintray.com/packages/florent37/maven/HollyViewPager/images/download.svg)](https://bintray.com/florent37/maven/HollyViewPager/_latestVersion)
 ```groovy
@@ -102,7 +102,7 @@ compile 'com.github.florent37:hollyviewpager:1.0.1'
 compile 'com.github.ksoichiro:android-observablescrollview:1.5.2'
 ```
 
-#Credits
+# Credits
 
 Author: Florent Champigny [http://www.florentchampigny.com/](http://www.florentchampigny.com/)
 
