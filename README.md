@@ -114,6 +114,7 @@ compile 'com.github.ksoichiro:android-observablescrollview:1.5.2'
 
 Author: Florent Champigny [http://www.florentchampigny.com/](http://www.florentchampigny.com/)
 
+Fiches Plateau Moto : [https://www.fiches-plateau-moto.fr/](https://www.fiches-plateau-moto.fr/)
 
 <a href="https://goo.gl/WXW8Dc">
   <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
