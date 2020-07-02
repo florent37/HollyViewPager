@@ -112,7 +112,7 @@ compile 'com.github.ksoichiro:android-observablescrollview:1.5.2'
 
 # Credits
 
-Author: Florent Champigny [http://www.florentchampigny.com/](http://www.florentchampigny.com/)
+Author: Florent Champigny 
 
 Fiches Plateau Moto : [https://www.fiches-plateau-moto.fr/](https://www.fiches-plateau-moto.fr/)
 
